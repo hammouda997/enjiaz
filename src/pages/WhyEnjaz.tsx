@@ -1,13 +1,10 @@
-
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const WhyEnjaz = () => {
-  return (
-    <>
+  return <>
       <Header />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-8 text-navy-800">Why Choose ENJAZ</h1>
@@ -15,9 +12,7 @@ const WhyEnjaz = () => {
         <section className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold text-navy-800">Our Difference</h2>
-            <p className="text-gray-700 leading-relaxed">
-              At ENJAZ, we bring together deep technical expertise and business acumen to deliver advisory services that drive tangible results. Our approach combines rigorous methodology with practical experience, ensuring that our recommendations are both strategic and implementable.
-            </p>
+            <p className="text-gray-700 leading-relaxed">At ENJAZ DATA SYSTEM, we bring together deep technical expertise and business acumen to deliver advisory services that drive tangible results. Our approach combines rigorous methodology with practical experience, ensuring that our recommendations are both strategic and implementable.</p>
             <p className="text-gray-700 leading-relaxed">
               Unlike traditional consultancies, we focus exclusively on technology and security, allowing us to maintain cutting-edge knowledge and specialized expertise that general practice firms cannot match.
             </p>
@@ -66,9 +61,7 @@ const WhyEnjaz = () => {
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-6 text-navy-800">Client Success Stories</h2>
           <div className="bg-navy-800 text-white p-8 rounded-lg">
-            <blockquote className="text-lg italic mb-4">
-              "ENJAZ provided strategic guidance that transformed our security posture and helped us navigate complex compliance requirements with confidence. Their expertise was invaluable to our business."
-            </blockquote>
+            <blockquote className="text-lg italic mb-4">"ENJAZ DATA SYSTEM provided strategic guidance that transformed our security posture and helped us navigate complex compliance requirements with confidence. Their expertise was invaluable to our business."</blockquote>
             <p className="font-medium">— Chief Information Security Officer, Financial Services Company</p>
           </div>
         </section>
@@ -81,8 +74,6 @@ const WhyEnjaz = () => {
         </div>
       </div>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default WhyEnjaz;
