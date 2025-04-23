@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -8,18 +7,57 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Logo component
+// Logo component with animation
 const Logo = () => (
   <Link to="/" className="flex items-center space-x-2">
     <img 
       src="/lovable-uploads/1e7e7c4f-9b47-432b-b20b-80fa19fd1b2b.png" 
       alt="Enjaz Data System" 
-      className="h-12"
+      className="h-16 animate-pulse" 
     />
   </Link>
 );
 
-// Dropdown component for services
+// About Dropdown component
+const AboutDropdown = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const aboutLinks = [
+    { name: "Why ENJAZ", path: "/about/why-enjaz" },
+    { name: "Our Mission & Vision", path: "/about/mission-vision" },
+    { name: "Careers", path: "/careers" },
+    { name: "Resources", path: "/resources" },
+  ];
+
+  return (
+    <div className="relative" onMouseLeave={() => setIsOpen(false)}>
+      <button
+        onMouseEnter={() => setIsOpen(true)}
+        onClick={() => setIsOpen(!isOpen)}
+        className="nav-link flex items-center gap-1 py-2"
+      >
+        About Us <ChevronDown size={16} className={`transition-transform ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+
+      {isOpen && (
+        <div className="absolute left-0 mt-1 w-64 bg-white rounded-md shadow-lg py-2 z-50 border border-gray-100 animate-fade-in">
+          {aboutLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-enjaz"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Services Dropdown component
 const ServicesDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -29,7 +67,7 @@ const ServicesDropdown = () => {
     { name: "Cybersecurity Advisory", path: "/services/cybersecurity" },
     { name: "Compliance & Governance", path: "/services/compliance" },
     { name: "Cloud & Infrastructure Strategy", path: "/services/cloud" },
-    { name: "Digital Transformation", path: "/services/digital" },
+    { name: "Network Security Architecture", path: "/services/network-security" },
     { name: "M&A Technology Due Diligence", path: "/services/ma-diligence" },
     { name: "Business Continuity & Resilience", path: "/services/continuity" },
     { name: "Executive Advisory Services", path: "/services/executive" },
@@ -70,12 +108,14 @@ const ServicesDropdown = () => {
   );
 };
 
-// Main navigation links
+// Navigation Links
 const NavigationLinks = () => (
   <nav className="hidden md:flex items-center gap-8">
+    <Link to="/" className="nav-link py-2">Home</Link>
     <ServicesDropdown />
-    <Link to="/about" className="nav-link py-2">About Us</Link>
     <Link to="/approach" className="nav-link py-2">Our Approach</Link>
+    <Link to="/industries" className="nav-link py-2">Industries</Link>
+    <AboutDropdown />
     <Link to="/insights" className="nav-link py-2">Insights</Link>
     <Link to="/contact" className="nav-link py-2">Contact</Link>
   </nav>
@@ -102,7 +142,7 @@ const MobileMenu = ({ isOpen, toggleMenu }: { isOpen: boolean; toggleMenu: () =>
           <Link to="/services/cybersecurity" className="text-base py-2 pl-4" onClick={toggleMenu}>Cybersecurity Advisory</Link>
           <Link to="/services/compliance" className="text-base py-2 pl-4" onClick={toggleMenu}>Compliance & Governance</Link>
           <Link to="/services/cloud" className="text-base py-2 pl-4" onClick={toggleMenu}>Cloud & Infrastructure Strategy</Link>
-          <Link to="/services/digital" className="text-base py-2 pl-4" onClick={toggleMenu}>Digital Transformation</Link>
+          <Link to="/services/network-security" className="text-base py-2 pl-4" onClick={toggleMenu}>Network Security Architecture</Link>
           <Link to="/services/ma-diligence" className="text-base py-2 pl-4" onClick={toggleMenu}>M&A Technology Due Diligence</Link>
           <Link to="/services/continuity" className="text-base py-2 pl-4" onClick={toggleMenu}>Business Continuity & Resilience</Link>
           <Link to="/services/executive" className="text-base py-2 pl-4" onClick={toggleMenu}>Executive Advisory Services</Link>
@@ -111,6 +151,7 @@ const MobileMenu = ({ isOpen, toggleMenu }: { isOpen: boolean; toggleMenu: () =>
           <div className="border-b border-gray-200 my-2"></div>
           <Link to="/about" className="text-lg font-medium py-2" onClick={toggleMenu}>About Us</Link>
           <Link to="/approach" className="text-lg font-medium py-2" onClick={toggleMenu}>Our Approach</Link>
+          <Link to="/industries" className="text-lg font-medium py-2" onClick={toggleMenu}>Industries</Link>
           <Link to="/insights" className="text-lg font-medium py-2" onClick={toggleMenu}>Insights</Link>
           <Link to="/contact" className="text-lg font-medium py-2" onClick={toggleMenu}>Contact</Link>
           

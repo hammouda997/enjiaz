@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { 
   MapPin, 
@@ -130,8 +129,8 @@ const Footer = () => {
               
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-enjaz flex-shrink-0" />
-                <a href="mailto:info@enjaz-advisory.com" className="text-gray-300 hover:text-enjaz transition-colors">
-                  info@enjaz-advisory.com
+                <a href="mailto:info@enjaz-ds.com" className="text-gray-300 hover:text-enjaz transition-colors">
+                  info@enjaz-ds.com
                 </a>
               </div>
             </div>
