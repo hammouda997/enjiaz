@@ -1,4 +1,3 @@
-
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -124,6 +123,125 @@ const CybersecurityAdvisory = () => {
           </div>
 
           <section className="mt-16">
+            <h2 className="text-2xl font-bold mb-6 text-navy-800">Security Operations Center (SOC) Services</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-4 text-navy-800">EDR/MDR Solutions</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-2">
+                    <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                    <span>Advanced endpoint detection and response</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                    <span>24/7 threat hunting and monitoring</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                    <span>Automated threat response and remediation</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-4 text-navy-800">SIEM Implementation</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-2">
+                    <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                    <span>Log collection and correlation</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                    <span>Real-time security monitoring</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                    <span>Advanced analytics and reporting</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-4 text-navy-800">Vulnerability Management</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-2">
+                    <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                    <span>Continuous vulnerability scanning</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                    <span>Risk prioritization</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                    <span>Remediation guidance</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section className="mt-16">
+            <h2 className="text-2xl font-bold mb-6 text-navy-800">Managed Security Service Provider (MSSP) Solutions</h2>
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Comprehensive Security Coverage</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start space-x-3">
+                      <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                      <div>
+                        <span className="font-medium">24/7 Security Monitoring</span>
+                        <p className="text-gray-600">Round-the-clock threat detection and response</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                      <div>
+                        <span className="font-medium">Incident Response</span>
+                        <p className="text-gray-600">Rapid response to security incidents and breaches</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                      <div>
+                        <span className="font-medium">Threat Intelligence</span>
+                        <p className="text-gray-600">Proactive threat detection and prevention</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">MSSP Benefits</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start space-x-3">
+                      <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                      <div>
+                        <span className="font-medium">Cost-Effective Security</span>
+                        <p className="text-gray-600">Reduce capital expenses and operational costs</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                      <div>
+                        <span className="font-medium">Expert Team</span>
+                        <p className="text-gray-600">Access to skilled security professionals</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Shield className="text-enjaz mt-1 flex-shrink-0" size={18} />
+                      <div>
+                        <span className="font-medium">Scalable Solutions</span>
+                        <p className="text-gray-600">Flexible security services that grow with your needs</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="mt-12">
             <h2 className="text-2xl font-bold mb-6 text-navy-800">Our Cybersecurity Advisory Approach</h2>
             <div className="bg-gray-50 p-6 rounded-lg">
               <ol className="space-y-8">

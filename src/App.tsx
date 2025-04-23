@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -16,6 +15,7 @@ import Approach from "./pages/Approach";
 import Industries from "./pages/Industries";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TechnologyAssessments from "./pages/services/TechnologyAssessments";
 import ItStrategy from "./pages/services/ItStrategy";
 import CloudInfrastructure from "./pages/services/CloudInfrastructure";
@@ -26,6 +26,7 @@ import ExecutiveAdvisory from "./pages/services/ExecutiveAdvisory";
 import BusinessContinuity from "./pages/services/BusinessContinuity";
 import ComplianceGovernance from "./pages/services/ComplianceGovernance";
 import Insights from "./pages/Insights";
+import { ChatBot } from "./components/ChatBot";
 
 const queryClient = new QueryClient();
 
@@ -56,9 +57,11 @@ const App = () => (
           <Route path="/industries" element={<Industries />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <ChatBot />
     </TooltipProvider>
   </QueryClientProvider>
 );
