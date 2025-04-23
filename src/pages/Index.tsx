@@ -1,17 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  Shield, 
-  FileSearch, 
-  ChartLine, 
-  ShieldCheck, 
-  FileCode, 
-  Cloud,
-  Code, 
-  Building2, 
-  FileCheck
-} from "lucide-react";
+import { ArrowRight, Shield, FileSearch, ChartLine, ShieldCheck, FileCode, Cloud, Code, Building2, FileCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
@@ -20,98 +8,81 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 // Sample data for services
-const services = [
-  {
-    title: "Technology & Security Assessments",
-    description: "Comprehensive evaluation of your IT infrastructure and security posture to identify vulnerabilities and improvement opportunities.",
-    icon: <Shield size={32} />,
-    link: "/services/assessments"
-  },
-  {
-    title: "IT Strategy & Transformation",
-    description: "Develop roadmaps and architectures that align your technology investments with business objectives.",
-    icon: <ChartLine size={32} />,
-    link: "/services/strategy"
-  },
-  {
-    title: "Cybersecurity Advisory",
-    description: "Expert guidance on cyber program development, architecture and risk management frameworks.",
-    icon: <ShieldCheck size={32} />,
-    link: "/services/cybersecurity"
-  },
-  {
-    title: "Compliance & Governance",
-    description: "Navigate complex regulatory requirements with our compliance expertise and governance frameworks.",
-    icon: <FileCheck size={32} />,
-    link: "/services/compliance"
-  },
-  {
-    title: "Cloud & Infrastructure",
-    description: "Optimize your cloud adoption strategy, migration planning and governance models.",
-    icon: <Cloud size={32} />,
-    link: "/services/cloud"
-  },
-  {
-    title: "Digital Transformation",
-    description: "Modernize systems and processes through automation, analytics and innovative digital solutions.",
-    icon: <Code size={32} />,
-    link: "/services/digital"
-  }
-];
+const services = [{
+  title: "Technology & Security Assessments",
+  description: "Comprehensive evaluation of your IT infrastructure and security posture to identify vulnerabilities and improvement opportunities.",
+  icon: <Shield size={32} />,
+  link: "/services/assessments"
+}, {
+  title: "IT Strategy & Transformation",
+  description: "Develop roadmaps and architectures that align your technology investments with business objectives.",
+  icon: <ChartLine size={32} />,
+  link: "/services/strategy"
+}, {
+  title: "Cybersecurity Advisory",
+  description: "Expert guidance on cyber program development, architecture and risk management frameworks.",
+  icon: <ShieldCheck size={32} />,
+  link: "/services/cybersecurity"
+}, {
+  title: "Compliance & Governance",
+  description: "Navigate complex regulatory requirements with our compliance expertise and governance frameworks.",
+  icon: <FileCheck size={32} />,
+  link: "/services/compliance"
+}, {
+  title: "Cloud & Infrastructure",
+  description: "Optimize your cloud adoption strategy, migration planning and governance models.",
+  icon: <Cloud size={32} />,
+  link: "/services/cloud"
+}, {
+  title: "Digital Transformation",
+  description: "Modernize systems and processes through automation, analytics and innovative digital solutions.",
+  icon: <Code size={32} />,
+  link: "/services/digital"
+}];
 
 // Sample data for testimonials
-const testimonials = [
-  {
-    quote: "Enjaz's cybersecurity assessment uncovered critical vulnerabilities we were unaware of. Their remediation plan helped us secure our infrastructure and meet compliance requirements.",
-    author: "Sarah Johnson",
-    role: "CIO",
-    company: "Global Financial Services"
-  },
-  {
-    quote: "The IT strategy roadmap that Enjaz developed transformed our technology capabilities. They understood our business goals and delivered a practical, actionable plan.",
-    author: "Michael Chen",
-    role: "CTO",
-    company: "Tech Innovations Inc."
-  },
-  {
-    quote: "Enjaz's cloud migration advisory services saved us from costly mistakes. Their expertise in governance and security ensured a smooth transition to our new infrastructure.",
-    author: "Aisha Al-Mansoori",
-    role: "IT Director",
-    company: "Emirates Healthcare"
-  }
-];
+const testimonials = [{
+  quote: "Enjaz's cybersecurity assessment uncovered critical vulnerabilities we were unaware of. Their remediation plan helped us secure our infrastructure and meet compliance requirements.",
+  author: "Sarah Johnson",
+  role: "CIO",
+  company: "Global Financial Services"
+}, {
+  quote: "The IT strategy roadmap that Enjaz developed transformed our technology capabilities. They understood our business goals and delivered a practical, actionable plan.",
+  author: "Michael Chen",
+  role: "CTO",
+  company: "Tech Innovations Inc."
+}, {
+  quote: "Enjaz's cloud migration advisory services saved us from costly mistakes. Their expertise in governance and security ensured a smooth transition to our new infrastructure.",
+  author: "Aisha Al-Mansoori",
+  role: "IT Director",
+  company: "Emirates Healthcare"
+}];
 
 // Sample data for case studies
-const caseStudies = [
-  {
-    title: "Financial Institution Strengthens Cyber Defenses",
-    description: "How we helped a leading bank improve their security posture and achieve regulatory compliance.",
-    industry: "Financial Services",
-    service: "Cybersecurity",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    slug: "financial-cyber-defenses"
-  },
-  {
-    title: "Retail Chain Digital Transformation",
-    description: "Modernizing legacy systems and processes for a major retail chain, resulting in 40% operational efficiency gain.",
-    industry: "Retail",
-    service: "Digital Transformation",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-    slug: "retail-digital-transformation"
-  },
-  {
-    title: "Government Agency Cloud Migration",
-    description: "Securely transitioning critical government services to the cloud with zero downtime.",
-    industry: "Government",
-    service: "Cloud Strategy",
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    slug: "government-cloud-migration"
-  }
-];
-
+const caseStudies = [{
+  title: "Financial Institution Strengthens Cyber Defenses",
+  description: "How we helped a leading bank improve their security posture and achieve regulatory compliance.",
+  industry: "Financial Services",
+  service: "Cybersecurity",
+  image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+  slug: "financial-cyber-defenses"
+}, {
+  title: "Retail Chain Digital Transformation",
+  description: "Modernizing legacy systems and processes for a major retail chain, resulting in 40% operational efficiency gain.",
+  industry: "Retail",
+  service: "Digital Transformation",
+  image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+  slug: "retail-digital-transformation"
+}, {
+  title: "Government Agency Cloud Migration",
+  description: "Securely transitioning critical government services to the cloud with zero downtime.",
+  industry: "Government",
+  service: "Cloud Strategy",
+  image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+  slug: "government-cloud-migration"
+}];
 const Index = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section */}
@@ -150,15 +121,7 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <ServiceCard
-                key={service.title}
-                title={service.title}
-                description={service.description}
-                icon={service.icon}
-                link={service.link}
-              />
-            ))}
+            {services.map(service => <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} link={service.link} />)}
           </div>
           
           <div className="text-center mt-12">
@@ -221,11 +184,7 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
-                alt="IT Advisory" 
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
+              <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" alt="IT Advisory" className="w-full h-auto rounded-lg shadow-lg" />
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg hidden md:block">
                 <div className="flex items-center gap-3">
                   <div className="bg-green-100 p-2 rounded-full">
@@ -234,7 +193,7 @@ const Index = () => {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-bold text-navy-800">100+</p>
+                    <p className="font-bold text-navy-800">50+</p>
                     <p className="text-sm text-gray-600">Projects Delivered</p>
                   </div>
                 </div>
@@ -257,15 +216,7 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={index}
-                quote={testimonial.quote}
-                author={testimonial.author}
-                role={testimonial.role}
-                company={testimonial.company}
-              />
-            ))}
+            {testimonials.map((testimonial, index) => <TestimonialCard key={index} quote={testimonial.quote} author={testimonial.author} role={testimonial.role} company={testimonial.company} />)}
           </div>
         </div>
       </section>
@@ -283,17 +234,7 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study) => (
-              <CaseStudyCard
-                key={study.slug}
-                title={study.title}
-                description={study.description}
-                industry={study.industry}
-                service={study.service}
-                image={study.image}
-                slug={study.slug}
-              />
-            ))}
+            {caseStudies.map(study => <CaseStudyCard key={study.slug} title={study.title} description={study.description} industry={study.industry} service={study.service} image={study.image} slug={study.slug} />)}
           </div>
           
           <div className="text-center mt-12">
@@ -322,8 +263,6 @@ const Index = () => {
       </section>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
