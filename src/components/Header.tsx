@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -17,6 +18,60 @@ const Logo = () => (
     />
   </Link>
 );
+
+// Services Dropdown component
+const ServicesDropdown = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const serviceLinks = [
+    { name: "Technology & Security Assessments", path: "/services/assessments" },
+    { name: "IT Strategy & Transformation", path: "/services/strategy" },
+    { name: "Cybersecurity Advisory", path: "/services/cybersecurity" },
+    { name: "Compliance & Governance", path: "/services/compliance" },
+    { name: "Cloud & Infrastructure Strategy", path: "/services/cloud" },
+    { name: "Network Security Architecture", path: "/services/network-security" },
+    { name: "M&A Technology Due Diligence", path: "/services/ma-diligence" },
+    { name: "Business Continuity & Resilience", path: "/services/continuity" },
+    { name: "Executive Advisory Services", path: "/services/executive" },
+    { name: "Development & Code Review", path: "/services/development" },
+  ];
+
+  return (
+    <div className="relative" onMouseLeave={() => setIsOpen(false)}>
+      <button
+        onMouseEnter={() => setIsOpen(true)}
+        onClick={() => setIsOpen(!isOpen)}
+        className="nav-link flex items-center gap-1 py-2"
+      >
+        Services <ChevronDown size={16} className={`transition-transform ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+
+      {isOpen && (
+        <div className="absolute left-0 mt-1 w-80 bg-white rounded-md shadow-lg py-2 z-50 border border-gray-100 animate-fade-in">
+          {serviceLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-enjaz"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <div className="border-t border-gray-100 mt-2 pt-2">
+            <Link
+              to="/services"
+              className="block px-4 py-2 text-sm text-enjaz font-medium hover:bg-gray-50"
+              onClick={() => setIsOpen(false)}
+            >
+              View All Services →
+            </Link>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 // About Dropdown component renamed to CompanyDropdown
 const CompanyDropdown = () => {
