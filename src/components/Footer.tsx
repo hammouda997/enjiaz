@@ -16,9 +16,9 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <img 
-              src="/lovable-uploads/1e7e7c4f-9b47-432b-b20b-80fa19fd1b2b.png" 
+              src="/lovable-uploads/7295c858-a17e-4cac-bd33-5eb86af4d9cf.png" 
               alt="Enjaz Data System" 
-              className="h-12 mb-4 brightness-0 invert"
+              className="h-12 mb-4 brightness-0 invert animate-pulse"
             />
             <p className="text-gray-300 mt-4">
               Leading IT & Security Advisory Firm providing expert consulting services to help organizations navigate complex technology challenges.

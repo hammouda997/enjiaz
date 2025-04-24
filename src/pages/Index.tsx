@@ -87,26 +87,26 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-navy-800 to-navy-900 text-white py-20 md:py-32 relative">
+      <section className="bg-gradient-to-r from-navy-800 to-navy-900 text-white py-20 md:py-32 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <div className="max-w-3xl animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in animation-delay-200">
               Expert IT & Security Advisory for Your Business Challenges
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8">
+            <p className="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in animation-delay-400">
               Strategic technology consulting to protect, optimize and transform your organization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-enjaz hover:bg-enjaz-600" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animation-delay-600">
+              <Button size="lg" className="bg-enjaz hover:bg-enjaz-600 animate-scale-in" asChild>
                 <Link to="/contact">Schedule a Consultation</Link>
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 animate-scale-in animation-delay-200" asChild>
                 <Link to="/services">Explore Our Services</Link>
               </Button>
             </div>
           </div>
         </div>
-        <div className="absolute right-0 bottom-0 w-1/3 h-full bg-dots-pattern opacity-10"></div>
+        <div className="absolute right-0 bottom-0 w-1/3 h-full bg-dots-pattern opacity-10 animate-fade-in animation-delay-800"></div>
       </section>
       
       {/* Services Overview Section */}
@@ -266,4 +266,5 @@ const Index = () => {
       <Footer />
     </div>;
 };
+
 export default Index;
