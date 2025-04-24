@@ -11,28 +11,69 @@ interface Message {
   type: 'user' | 'bot';
 }
 
+interface UserInfo {
+  fullName: string;
+  company: string;
+  email: string;
+}
+
 export const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([{
     type: 'bot',
-    content: 'Hello! I\'m here to help you learn more about our services. How can I assist you today?'
+    content: "Hello! I'm here to help. To get started, please provide your full name."
   }]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [userInfo, setUserInfo] = useState<Partial<UserInfo>>({});
+  const [stage, setStage] = useState<'name' | 'company' | 'email' | 'chat'>('name');
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (!input.trim()) return;
     
     setMessages(prev => [...prev, { type: 'user', content: input }]);
     setInput('');
     setIsLoading(true);
+
+    let response = '';
     
-    // Simulate bot response - Replace with actual chatbot integration
+    switch(stage) {
+      case 'name':
+        setUserInfo(prev => ({ ...prev, fullName: input }));
+        response = "Thank you! Could you please tell me your company name?";
+        setStage('company');
+        break;
+      case 'company':
+        setUserInfo(prev => ({ ...prev, company: input }));
+        response = "Great! Lastly, what's your email address?";
+        setStage('email');
+        break;
+      case 'email':
+        setUserInfo(prev => ({ ...prev, email: input }));
+        response = `Thank you for providing your information! How can I help you today?`;
+        setStage('chat');
+        
+        // Send email with user info
+        try {
+          await fetch('mailto:info@enjaz-ds.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              userInfo,
+              messages,
+            })
+          });
+        } catch (error) {
+          console.error('Failed to send email:', error);
+        }
+        break;
+      case 'chat':
+        response = "Thank you for your message. One of our representatives will review your request and get back to you shortly at " + userInfo.email;
+        break;
+    }
+
     setTimeout(() => {
-      setMessages(prev => [...prev, {
-        type: 'bot',
-        content: "Thank you for your message. One of our representatives will get back to you shortly. In the meantime, feel free to check our services or contact us directly at info@enjaz-ds.com"
-      }]);
+      setMessages(prev => [...prev, { type: 'bot', content: response }]);
       setIsLoading(false);
     }, 1000);
   };
@@ -105,3 +146,5 @@ export const ChatBot = () => {
     </>
   );
 };
+
+export default ChatBot;

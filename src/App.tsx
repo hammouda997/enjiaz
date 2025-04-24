@@ -26,6 +26,7 @@ import ExecutiveAdvisory from "./pages/services/ExecutiveAdvisory";
 import BusinessContinuity from "./pages/services/BusinessContinuity";
 import ComplianceGovernance from "./pages/services/ComplianceGovernance";
 import Insights from "./pages/Insights";
+import DevelopmentCodeReview from "./pages/services/DevelopmentCodeReview";
 import { ChatBot } from "./components/ChatBot";
 
 const queryClient = new QueryClient();
@@ -58,6 +59,7 @@ const App = () => (
           <Route path="/insights" element={<Insights />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/services/development" element={<DevelopmentCodeReview />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

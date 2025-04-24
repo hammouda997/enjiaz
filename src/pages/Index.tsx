@@ -43,9 +43,9 @@ const services = [{
 // Sample data for testimonials
 const testimonials = [{
   quote: "Enjaz's cybersecurity assessment uncovered critical vulnerabilities we were unaware of. Their remediation plan helped us secure our infrastructure and meet compliance requirements.",
-  author: "Sarah Johnson",
+  author: "Hatem AYARI",
   role: "CIO",
-  company: "Global Financial Services"
+  company: "COTUGRAIN"
 }, {
   quote: "The IT strategy roadmap that Enjaz developed transformed our technology capabilities. They understood our business goals and delivered a practical, actionable plan.",
   author: "Michael Chen",
@@ -53,9 +53,9 @@ const testimonials = [{
   company: "Tech Innovations Inc."
 }, {
   quote: "Enjaz's cloud migration advisory services saved us from costly mistakes. Their expertise in governance and security ensured a smooth transition to our new infrastructure.",
-  author: "Aisha Al-Mansoori",
-  role: "IT Director",
-  company: "Emirates Healthcare"
+  author: "Nahed BEN SLIMA",
+  role: "CTO",
+  company: "MTT"
 }];
 
 // Sample data for case studies
@@ -81,6 +81,7 @@ const caseStudies = [{
   image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
   slug: "government-cloud-migration"
 }];
+
 const Index = () => {
   return <div className="min-h-screen flex flex-col">
       <Header />

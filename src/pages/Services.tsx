@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
@@ -82,6 +81,13 @@ const allServices = [
     icon: <BookOpen size={32} />,
     link: "/services/executive",
     category: "advisory"
+  },
+  {
+    title: "Development & Code Review",
+    description: "Automated code quality and security reviews with actionable intelligence for secure, efficient applications.",
+    icon: <Code size={32} />,
+    link: "/services/development",
+    category: "security"
   }
 ];
 
