@@ -219,14 +219,14 @@ const About = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <span className="bg-navy-50 text-navy-800 px-4 py-2 rounded-full text-sm">CISSP</span>
               <span className="bg-navy-50 text-navy-800 px-4 py-2 rounded-full text-sm">CISM</span>
-              <span className="bg-navy-50 text-navy-800 px-4 py-2 rounded-full text-sm">CGEIT</span>
+              <span className="bg-navy-50 text-navy-800 px-4 py-2 rounded-full text-sm">CEH</span>
               <span className="bg-navy-50 text-navy-800 px-4 py-2 rounded-full text-sm">PMP</span>
-              <span className="bg-navy-50 text-navy-800 px-4 py-2 rounded-full text-sm">TOGAF</span>
+              
               <span className="bg-navy-50 text-navy-800 px-4 py-2 rounded-full text-sm">AWS Certified Solutions Architect</span>
               <span className="bg-navy-50 text-navy-800 px-4 py-2 rounded-full text-sm">Microsoft Azure Expert</span>
-              <span className="bg-navy-50 text-navy-800 px-4 py-2 rounded-full text-sm">Google Cloud Professional</span>
+              <span className="bg-navy-50 text-navy-800 px-4 py-2 rounded-full text-sm">ISO</span>
               <span className="bg-navy-50 text-navy-800 px-4 py-2 rounded-full text-sm">ITIL</span>
-              <span className="bg-navy-50 text-navy-800 px-4 py-2 rounded-full text-sm">COBIT</span>
+              
             </div>
           </div>
         </div>
