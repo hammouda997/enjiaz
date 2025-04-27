@@ -1,21 +1,10 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import { Link } from "react-router-dom";
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock,
-  MessageSquare,
-  FileText,
-  HelpCircle
-} from "lucide-react";
-
+import { MapPin, Phone, Mail, Clock, MessageSquare, FileText, HelpCircle } from "lucide-react";
 const Contact = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section */}
@@ -71,7 +60,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy-800">Phone</h3>
-                    <p className="text-gray-600">+971 4 123 4567</p>
+                    <p className="text-gray-600">+216 58 255 395</p>
                   </div>
                 </div>
                 
@@ -81,9 +70,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy-800">Email</h3>
-                    <a href="mailto:info@enjaz-advisory.com" className="text-gray-600 hover:text-enjaz transition-colors">
-                      info@enjaz-advisory.com
-                    </a>
+                    <a href="mailto:info@enjaz-advisory.com" className="text-gray-600 hover:text-enjaz transition-colors">info@enjaz-ds.com</a>
                   </div>
                 </div>
                 
@@ -212,8 +199,6 @@ const Contact = () => {
       </section>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
