@@ -62,7 +62,7 @@ const WhyEnjaz = () => {
           <h2 className="text-2xl font-semibold mb-6 text-navy-800">Client Success Stories</h2>
           <div className="bg-navy-800 text-white p-8 rounded-lg">
             <blockquote className="text-lg italic mb-4">"ENJAZ DATA SYSTEM provided strategic guidance that transformed our security posture and helped us navigate complex compliance requirements with confidence. Their expertise was invaluable to our business."</blockquote>
-            <p className="font-medium">— Chief Information Security Officer, Financial Services Company</p>
+            <p className="font-medium">— Chief Information Security Officer, MTT</p>
           </div>
         </section>
         
