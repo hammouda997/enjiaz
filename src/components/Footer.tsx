@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Facebook, Linkedin, Twitter } from "lucide-react";
 const Footer = () => {
@@ -104,8 +105,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin size={18} className="text-enjaz mt-1 flex-shrink-0" />
                 <span className="text-gray-300">
-                  123 Technology Park, Suite 500<br />
-                  Dubai, United Arab Emirates
+                  Immeuble Molka Rue des Palmiers<br />
+                  KHZEMA 4051
                 </span>
               </div>
               

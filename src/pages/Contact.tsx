@@ -48,8 +48,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-navy-800">Our Office</h3>
                     <p className="text-gray-600">
-                      123 Technology Park, Suite 500<br />
-                      Dubai, United Arab Emirates
+                      Immeuble Molka Rue des Palmiers<br />
+                      KHZEMA 4051
                     </p>
                   </div>
                 </div>
