@@ -70,7 +70,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy-800">Email</h3>
-                    <a href="mailto:info@enjaz-advisory.com" className="text-gray-600 hover:text-enjaz transition-colors">info@enjaz-ds.com</a>
+                    <a href="mailto:info@enjaz-advisory.com" className="text-gray-600 hover:text-enjaz transition-colors">info@enjaz-ds.net</a>
                   </div>
                 </div>
                 
