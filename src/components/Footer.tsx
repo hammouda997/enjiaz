@@ -1,25 +1,12 @@
 import { Link } from "react-router-dom";
-import { 
-  MapPin, 
-  Phone, 
-  Mail,
-  Facebook,
-  Linkedin,
-  Twitter
-} from "lucide-react";
-
+import { MapPin, Phone, Mail, Facebook, Linkedin, Twitter } from "lucide-react";
 const Footer = () => {
-  return (
-    <footer className="bg-navy-800 text-white">
+  return <footer className="bg-navy-800 text-white">
       <div className="container mx-auto py-16 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <img 
-              src="/lovable-uploads/7295c858-a17e-4cac-bd33-5eb86af4d9cf.png" 
-              alt="Enjaz Data System" 
-              className="h-12 mb-4 brightness-0 invert animate-pulse"
-            />
+            <img src="/lovable-uploads/7295c858-a17e-4cac-bd33-5eb86af4d9cf.png" alt="Enjaz Data System" className="h-12 mb-4 brightness-0 invert animate-pulse" />
             <p className="text-gray-300 mt-4">
               Leading IT & Security Advisory Firm providing expert consulting services to help organizations navigate complex technology challenges.
             </p>
@@ -124,7 +111,7 @@ const Footer = () => {
               
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-enjaz flex-shrink-0" />
-                <span className="text-gray-300">+971 4 123 4567</span>
+                <span className="text-gray-300">+216  58 255 395</span>
               </div>
               
               <div className="flex items-center space-x-3">
@@ -155,8 +142,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
