@@ -19,7 +19,11 @@ const TestimonialCard = ({ quote, author, role, company }: TestimonialCardProps)
       </div>
       <div>
         <p className="font-semibold text-navy-800">{author}</p>
-        <p className="text-sm text-gray-600">{role}, {company}</p>
+        {(role || company) && (
+          <p className="text-sm text-gray-600">
+            {role && role}{role && company && ", "}{company && company}
+          </p>
+        )}
       </div>
     </Card>
   );

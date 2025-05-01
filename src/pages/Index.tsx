@@ -47,10 +47,10 @@ const testimonials = [{
   role: "CIO",
   company: "COTUGRAIN"
 }, {
-  quote: "The IT strategy roadmap that Enjaz developed transformed our technology capabilities. They understood our business goals and delivered a practical, actionable plan.",
-  author: "Michael Chen",
-  role: "CTO",
-  company: "Tech Innovations Inc."
+  quote: "Be our next success story and see the difference.",
+  author: "Ready to add your name to the list?",
+  role: "",
+  company: ""
 }, {
   quote: "Enjaz's cloud migration advisory services saved us from costly mistakes. Their expertise in governance and security ensured a smooth transition to our new infrastructure.",
   author: "Nahed BEN SLIMA",
