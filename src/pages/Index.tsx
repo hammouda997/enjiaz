@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, FileSearch, ChartLine, ShieldCheck, FileCode, Cloud, Code, Building2, FileCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -100,7 +101,7 @@ const Index = () => {
               <Button size="lg" className="bg-enjaz hover:bg-enjaz-600 animate-scale-in" asChild>
                 <Link to="/contact">Schedule a Consultation</Link>
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 animate-scale-in animation-delay-200" asChild>
+              <Button size="lg" variant="outline" className="text-black bg-white hover:bg-gray-100 animate-scale-in animation-delay-200" asChild>
                 <Link to="/services">Explore Our Services</Link>
               </Button>
             </div>
